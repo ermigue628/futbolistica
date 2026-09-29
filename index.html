@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Asistencia Futbolística</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Open+Sans:wght@400;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="tel">
+ <header><h1>Asistencia futbolística</h1><p>Descubre qué posición encaja con tu forma de jugar</p></header>
+ <main>
+  <section class="pant on" id="p-perfil">
+   <h2>Tu perfil de juego</h2>
+   <p class="sub">Sube un vídeo, cuéntanos cómo juegas y puntúa tus cualidades.</p>
+   <div class="caja">
+    <h3>Vídeo</h3>
+    <div class="video" id="video-box">
+     <button class="subir" id="btn-subir" aria-label="Subir vídeo"><svg viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V5M5 12l7-7 7 7"/></svg></button>
+     <video id="vid" controls playsinline></video>
+    </div>
+    <input type="file" id="file" accept="video/*" hidden>
+    <p class="vnota" id="vnota">Sube un vídeo tuyo jugando (opcional).</p>
+   </div>
+   <div class="caja">
+    <h3>Texto</h3>
+    <textarea id="dotes" placeholder="Añade tus dotes futbolísticos: por ejemplo, «soy rápido, regateo bien y me gusta marcar goles»"></textarea>
+   </div>
+   <div class="caja">
+    <h3>Tus cualidades</h3>
+    <div id="atts"></div>
+   </div>
+   <button class="btn" id="btn-calc">Ver mi posición</button>
+  </section>
+
+  <section class="pant" id="p-material">
+   <h2>Elementos necesarios</h2>
+   <p class="sub">Marca lo que ya tienes para entrenar tu posición.</p>
+   <ul class="mat" id="mat"></ul>
+   <p class="prog" id="prog"></p>
+  </section>
+
+  <section class="pant" id="p-res">
+   <div id="res"><div class="vacio"><p class="tit" style="font-size:17px;font-weight:800">Aún no hay resultado</p><p style="margin-top:8px;font-size:14px">Completa tu perfil de juego y pulsa «Ver mi posición».</p></div></div>
+  </section>
+ </main>
+ <nav>
+  <button class="on" data-p="perfil"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg>Perfil</button>
+  <button data-p="material"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 6h11M9 12h11M9 18h11M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg>Material</button>
+  <button data-p="res"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 8l4 3-1.5 5h-5L8 11z"/></svg>Posición</button>
+ </nav>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
